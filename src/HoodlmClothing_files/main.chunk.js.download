@@ -1,0 +1,1034 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
+
+/***/ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/styles/main.scss":
+/*!********************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!./node_modules/postcss-loader/src??postcss!./node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-3!./src/styles/main.scss ***!
+  \********************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ "./node_modules/css-loader/dist/runtime/api.js")(false);
+// Imports
+exports.i(__webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../node_modules/postcss-loader/src??postcss!../../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-3!slick-carousel/slick/slick.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./node_modules/slick-carousel/slick/slick.css"), "");
+exports.i(__webpack_require__(/*! -!../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../node_modules/postcss-loader/src??postcss!../../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-3!slick-carousel/slick/slick-theme.css */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./node_modules/slick-carousel/slick/slick-theme.css"), "");
+
+// Module
+exports.push([module.i, "body {\n  margin: 0px;\n  font-family: 'Titillium Web', sans-serif;\n  background: #fffafa;\n  color: #232528; }\n\na {\n  text-decoration: none;\n  color: black; }\n\n.FooterContainer {\n  display: flex;\n  justify-content: center;\n  flex-direction: column;\n  align-items: center;\n  border-top: 1px solid rgba(0, 0, 0, 0.2);\n  padding-top: 11px;\n  margin-top: 40px; }\n  .FooterContainer .FooterLinks {\n    font-size: 1.7rem; }\n    .FooterContainer .FooterLinks i {\n      padding: 4px; }\n    .FooterContainer .FooterLinks :hover {\n      color: #64bde8; }\n  .FooterContainer .FooterTitle {\n    color: grey; }\n\n.NavBar {\n  background: #fff;\n  display: flex;\n  justify-content: space-between;\n  width: 100%;\n  border-bottom: 1px solid black;\n  font-family: 'Oswald', sans-serif; }\n  .NavBar .NavBarLeftColumn img {\n    width: 133px;\n    filter: grayscale(0);\n    transition: .03s ease-in-out; }\n    .NavBar .NavBarLeftColumn img:hover {\n      filter: grayscale(100%); }\n  .NavBar .NavBarCenterColumn {\n    display: flex;\n    width: 90%;\n    align-items: center; }\n  .NavBar .NavBarLinkWrapper {\n    display: flex;\n    text-decoration: none;\n    font-size: 2rem;\n    font-weight: bold;\n    margin: 0px !important;\n    padding: 0px !important; }\n    .NavBar .NavBarLinkWrapper .NavBarLinkListItems {\n      display: flex;\n      flex-direction: row; }\n    .NavBar .NavBarLinkWrapper li {\n      padding-right: 20px; }\n      .NavBar .NavBarLinkWrapper li :hover {\n        color: #64bde8; }\n  .NavBar ul {\n    list-style: none; }\n  .NavBar .NavBarRightColumn {\n    display: flex;\n    justify-content: center;\n    font-size: 2rem;\n    padding: 20px; }\n    .NavBar .NavBarRightColumn :hover {\n      color: #64bde8; }\n\n@media (max-width: 700px) {\n  .NavBar .NavBarCenterColumn {\n    display: flex;\n    justify-content: center; }\n    .NavBar .NavBarCenterColumn .HamburgerCloseButton {\n      font-size: 2rem; }\n    .NavBar .NavBarCenterColumn .HamburgerOpenButton {\n      font-size: 2rem;\n      margin-top: 26px; }\n    .NavBar .NavBarCenterColumn .NavBarLinkListItems {\n      flex-direction: column;\n      font-size: 3rem; } }\n\n.BlogWrapper {\n  display: flex;\n  flex-direction: column;\n  align-items: center;\n  width: 100vw;\n  margin-bottom: 55px;\n  font-family: 'Titillium Web', sans-serif; }\n  .BlogWrapper .BlogContent {\n    display: flex;\n    align-items: center;\n    width: 53%; }\n\n@media (max-width: 700px) {\n  .BlogWrapper {\n    margin-top: 25px; }\n    .BlogWrapper .BlogContent {\n      width: 80%; } }\n\n.slick-list .slick-track .slick-slide .SlickImg {\n  display: flex; }\n  .slick-list .slick-track .slick-slide .SlickImg .SlickHeader {\n    display: flex;\n    flex-direction: column;\n    justify-content: center;\n    align-items: center; }\n\n.slick-list .slick-track .slick-slide .one {\n  background-image: url(\"https://source.unsplash.com/random\");\n  background-position: center center;\n  background-size: cover; }\n", ""]);
+
+
+
+/***/ }),
+
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _pages_home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/home */ "./src/pages/home.js");
+/* harmony import */ var _pages_shop__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/shop */ "./src/pages/shop.js");
+/* harmony import */ var _pages_media__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/media */ "./src/pages/media.js");
+/* harmony import */ var _pages_blog__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/blog */ "./src/pages/blog.js");
+/* harmony import */ var _pages_cart__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/cart */ "./src/pages/cart.js");
+var _jsxFileName = "C:\\Users\\skyle\\Documents\\Code\\Projects\\Hoodlm\\hoodlmclothing\\src\\App.js";
+
+
+
+
+
+
+ // import { library } from '@fortawesome/fontawesome-svg-core';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { fafacebooksquare } from '@fortawesome/free-solid-svg-icons';
+// library.add(fafacebooksquare)
+
+class App extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "app",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "container",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      exact: true,
+      path: "/",
+      component: _pages_home__WEBPACK_IMPORTED_MODULE_2__["default"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      path: "/Shop",
+      component: _pages_shop__WEBPACK_IMPORTED_MODULE_3__["default"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 22
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      path: "/Media",
+      component: _pages_media__WEBPACK_IMPORTED_MODULE_4__["default"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      path: "/Blog",
+      component: _pages_blog__WEBPACK_IMPORTED_MODULE_5__["default"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      path: "/Cart",
+      component: _pages_cart__WEBPACK_IMPORTED_MODULE_6__["default"],
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 25
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+      component: Error,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    })))));
+  }
+
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (App);
+{
+  /* <React.Fragment>
+  <Navbar />
+  <Switch>
+   <Route exact path="/" component={ProductList} />
+   <Route path="/details" component={Details} />
+   <Route path="/cart" component={Cart} />
+   <Route component={Default} />
+  </Switch>
+  <Modal />
+  </React.Fragment> */
+}
+
+/***/ }),
+
+/***/ "./src/assets/hoolmimg.jpg":
+/*!*********************************!*\
+  !*** ./src/assets/hoolmimg.jpg ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/jpeg;base64,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"
+
+/***/ }),
+
+/***/ "./src/components/navigation/footer.js":
+/*!*********************************************!*\
+  !*** ./src/components/navigation/footer.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Footer; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\skyle\\Documents\\Code\\Projects\\Hoodlm\\hoodlmclothing\\src\\components\\navigation\\footer.js";
+
+class Footer extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "FooterContainer",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 6
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "FooterLinks",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 7
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      class: "fab fa-instagram",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      class: "fab fa-facebook-square",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      class: "fab fa-twitter-square",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      class: "fab fa-youtube",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "FooterTitle",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, "\xA9 2019 | Hoodlm Clothing")));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/components/navigation/navbar.js":
+/*!*********************************************!*\
+  !*** ./src/components/navigation/navbar.js ***!
+  \*********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Navbar; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_responsive_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-responsive-navbar */ "./node_modules/react-responsive-navbar/dist/index.es.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _assets_hoolmimg_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../assets/hoolmimg.jpg */ "./src/assets/hoolmimg.jpg");
+/* harmony import */ var _assets_hoolmimg_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_assets_hoolmimg_jpg__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "C:\\Users\\skyle\\Documents\\Code\\Projects\\Hoodlm\\hoodlmclothing\\src\\components\\navigation\\navbar.js";
+
+
+
+
+class Navbar extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "NavBar",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "NavBarLeftColumn",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      to: "/",
+      className: "HoodlmLogo",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+      src: _assets_hoolmimg_jpg__WEBPACK_IMPORTED_MODULE_3___default.a,
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "NavBarCenterColumn",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_responsive_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      menuOpenButton: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "HamburgerCloseButton",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }, " ", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        class: "fas fa-bars",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 15
+        },
+        __self: this
+      }), " "),
+      menuCloseButton: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "HamburgerOpenButton",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+        class: "fas fa-times",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      })),
+      changeMenuOn: "500px",
+      largeMenuClassName: "large-menu-classname",
+      smallMenuClassName: "small-menu-classname",
+      menu: react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "NavBarLinkWrapper",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        className: "NavBarLinkListItems",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/shop",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
+      }, "shop")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/blog",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      }, "blog")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+        to: "/media",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, "media")))),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "NavBarRightColumn",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 31
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_2__["Link"], {
+      to: "/cart",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+      class: "fas fa-shopping-bag",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }))));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./styles/main.scss */ "./src/styles/main.scss");
+/* harmony import */ var _styles_main_scss__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_styles_main_scss__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./App */ "./src/App.js");
+/* harmony import */ var _serviceWorker__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./serviceWorker */ "./src/serviceWorker.js");
+var _jsxFileName = "C:\\Users\\skyle\\Documents\\Code\\Projects\\Hoodlm\\hoodlmclothing\\src\\index.js";
+
+
+
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_3__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}), document.getElementById('root'));
+_serviceWorker__WEBPACK_IMPORTED_MODULE_4__["unregister"]();
+
+/***/ }),
+
+/***/ "./src/pages/blog.js":
+/*!***************************!*\
+  !*** ./src/pages/blog.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Blog; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_navigation_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/navigation/navbar */ "./src/components/navigation/navbar.js");
+/* harmony import */ var _components_navigation_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/navigation/footer */ "./src/components/navigation/footer.js");
+var _jsxFileName = "C:\\Users\\skyle\\Documents\\Code\\Projects\\Hoodlm\\hoodlmclothing\\src\\pages\\blog.js";
+
+
+
+class Blog extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_navigation_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "BlogWrapper",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "BlogTitle",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, "Spring Collection Release")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "BlogContent",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 14
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 15
+      },
+      __self: this
+    }, "Hoodlm Clothing will be dropping a new collection Saturday April 20th at 11 AM MTN time. This collection will consist of The \"Stuck Dead\" Tee In 2 Colors Black And Slate. The Hoodlm 3M \"Side Logo\" Camp Cap in 2 Colors Black And Camo. Also The super limited Yellow \"Illegal Business' Deck. This Release has been worked on for months to make sure everything was made to perfection. After a couple \"successful\" releases I did know what I wanted to do next. There were all these ideas in my sketch book but I didn't know what to make! I Made the 3M hats in 2018 I had a box of them and only gave a couple to close friends! I teased them on social media but never got around to releasing them. Months would go by and id just see the box sitting I decided to drop them in a collection and started working! The T-Shirts are an inspiration of a Vintage Rock Tee but we threw our own vibe into it! The decks well I just made those to flex! I suck at skateboarding so theres no way I could get sponsored. Whats the way around it? Sponsor myself!! Either way I think I made a sick deck and you guys get to enjoy them! To everybody thats followed the journey thank you! Thanks for taking your time to click on this page and view what we have to bring to you! Your support means tons and I couldn't thank you enough for riding with us! Enjoy the clothes lets just say there is more coming! Stay tuned and keep an eye out for the giving on the Instagram I put a link in the home page so its easy to find for you lazy people out there! If thats to hard to do @hoodlmclothing on Instagram. All love, No hate! If you ain't reppin' Hoodlm, We cant relate. Omar"))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_navigation_footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/pages/cart.js":
+/*!***************************!*\
+  !*** ./src/pages/cart.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Cart; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_navigation_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/navigation/navbar */ "./src/components/navigation/navbar.js");
+/* harmony import */ var _components_navigation_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/navigation/footer */ "./src/components/navigation/footer.js");
+var _jsxFileName = "C:\\Users\\skyle\\Documents\\Code\\Projects\\Hoodlm\\hoodlmclothing\\src\\pages\\cart.js";
+
+
+
+class Cart extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_navigation_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }), "Hello from your cart", react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_navigation_footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/pages/home.js":
+/*!***************************!*\
+  !*** ./src/pages/home.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Home; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_navigation_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/navigation/navbar */ "./src/components/navigation/navbar.js");
+/* harmony import */ var _components_navigation_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/navigation/footer */ "./src/components/navigation/footer.js");
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-slick */ "./node_modules/react-slick/lib/index.js");
+/* harmony import */ var react_slick__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_slick__WEBPACK_IMPORTED_MODULE_3__);
+var _jsxFileName = "C:\\Users\\skyle\\Documents\\Code\\Projects\\Hoodlm\\hoodlmclothing\\src\\pages\\home.js";
+
+
+
+
+class Home extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    var settings = {
+      dots: true,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      variableWidth: true,
+      centerMode: true
+    };
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 17
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_navigation_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 18
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_3___default.a, Object.assign({}, settings, {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "SlickImg one",
+      style: {
+        width: 1000,
+        height: 500
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "SlickHeader",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "TopHeader",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 23
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 24
+      },
+      __self: this
+    }, "Hoodlm Clothing")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "BottomHeader",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 26
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 27
+      },
+      __self: this
+    }, "\"Hold the vision, trust the proccess\"")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "SlickImg one",
+      style: {
+        width: 1000
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 32
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "SlickHeader",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 33
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "TopHeader",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 35
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 36
+      },
+      __self: this
+    }, "Hoodlm Clothing")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "BottomHeader",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 38
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 39
+      },
+      __self: this
+    }, "\"Hold the vision, trust the proccess\"")))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "SlickImg one",
+      style: {
+        width: 1000
+      },
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 44
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "SlickHeader",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 45
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "TopHeader",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 47
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 48
+      },
+      __self: this
+    }, "Hoodlm Clothing")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      className: "BottomHeader",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 50
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 51
+      },
+      __self: this
+    }, "\"Hold the vision, trust the proccess\""))))), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_navigation_footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 72
+      },
+      __self: this
+    }));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/pages/media.js":
+/*!****************************!*\
+  !*** ./src/pages/media.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Media; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_navigation_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/navigation/navbar */ "./src/components/navigation/navbar.js");
+/* harmony import */ var _components_navigation_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/navigation/footer */ "./src/components/navigation/footer.js");
+var _jsxFileName = "C:\\Users\\skyle\\Documents\\Code\\Projects\\Hoodlm\\hoodlmclothing\\src\\pages\\media.js";
+
+
+
+class Media extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_navigation_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, "hello from the media"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_navigation_footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/pages/shop.js":
+/*!***************************!*\
+  !*** ./src/pages/shop.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Shop; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_navigation_navbar__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/navigation/navbar */ "./src/components/navigation/navbar.js");
+/* harmony import */ var _components_navigation_footer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/navigation/footer */ "./src/components/navigation/footer.js");
+var _jsxFileName = "C:\\Users\\skyle\\Documents\\Code\\Projects\\Hoodlm\\hoodlmclothing\\src\\pages\\shop.js";
+
+
+
+class Shop extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
+  render() {
+    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 8
+      },
+      __self: this
+    }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_navigation_navbar__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 9
+      },
+      __self: this
+    }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h1", {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 10
+      },
+      __self: this
+    }, "hello from the store"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_navigation_footer__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }));
+  }
+
+}
+
+/***/ }),
+
+/***/ "./src/serviceWorker.js":
+/*!******************************!*\
+  !*** ./src/serviceWorker.js ***!
+  \******************************/
+/*! exports provided: register, unregister */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "register", function() { return register; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "unregister", function() { return unregister; });
+// This optional code is used to register a service worker.
+// register() is not called by default.
+// This lets the app load faster on subsequent visits in production, and gives
+// it offline capabilities. However, it also means that developers (and users)
+// will only see deployed updates on subsequent visits to a page, after all the
+// existing tabs open on the page have been closed, since previously cached
+// resources are updated in the background.
+// To learn more about the benefits of this model and instructions on how to
+// opt-in, read https://bit.ly/CRA-PWA
+const isLocalhost = Boolean(window.location.hostname === 'localhost' || // [::1] is the IPv6 localhost address.
+window.location.hostname === '[::1]' || // 127.0.0.1/8 is considered localhost for IPv4.
+window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/));
+function register(config) {
+  if (false) {}
+}
+
+function registerValidSW(swUrl, config) {
+  navigator.serviceWorker.register(swUrl).then(registration => {
+    registration.onupdatefound = () => {
+      const installingWorker = registration.installing;
+
+      if (installingWorker == null) {
+        return;
+      }
+
+      installingWorker.onstatechange = () => {
+        if (installingWorker.state === 'installed') {
+          if (navigator.serviceWorker.controller) {
+            // At this point, the updated precached content has been fetched,
+            // but the previous service worker will still serve the older
+            // content until all client tabs are closed.
+            console.log('New content is available and will be used when all ' + 'tabs for this page are closed. See https://bit.ly/CRA-PWA.'); // Execute callback
+
+            if (config && config.onUpdate) {
+              config.onUpdate(registration);
+            }
+          } else {
+            // At this point, everything has been precached.
+            // It's the perfect time to display a
+            // "Content is cached for offline use." message.
+            console.log('Content is cached for offline use.'); // Execute callback
+
+            if (config && config.onSuccess) {
+              config.onSuccess(registration);
+            }
+          }
+        }
+      };
+    };
+  }).catch(error => {
+    console.error('Error during service worker registration:', error);
+  });
+}
+
+function checkValidServiceWorker(swUrl, config) {
+  // Check if the service worker can be found. If it can't reload the page.
+  fetch(swUrl).then(response => {
+    // Ensure service worker exists, and that we really are getting a JS file.
+    const contentType = response.headers.get('content-type');
+
+    if (response.status === 404 || contentType != null && contentType.indexOf('javascript') === -1) {
+      // No service worker found. Probably a different app. Reload the page.
+      navigator.serviceWorker.ready.then(registration => {
+        registration.unregister().then(() => {
+          window.location.reload();
+        });
+      });
+    } else {
+      // Service worker found. Proceed as normal.
+      registerValidSW(swUrl, config);
+    }
+  }).catch(() => {
+    console.log('No internet connection found. App is running in offline mode.');
+  });
+}
+
+function unregister() {
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.ready.then(registration => {
+      registration.unregister();
+    });
+  }
+}
+
+/***/ }),
+
+/***/ "./src/styles/main.scss":
+/*!******************************!*\
+  !*** ./src/styles/main.scss ***!
+  \******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../node_modules/postcss-loader/src??postcss!../../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-3!./main.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/styles/main.scss");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../node_modules/postcss-loader/src??postcss!../../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-3!./main.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/styles/main.scss", function() {
+		var newContent = __webpack_require__(/*! !../../node_modules/css-loader/dist/cjs.js??ref--6-oneOf-5-1!../../node_modules/postcss-loader/src??postcss!../../node_modules/sass-loader/lib/loader.js??ref--6-oneOf-5-3!./main.scss */ "./node_modules/css-loader/dist/cjs.js?!./node_modules/postcss-loader/src/index.js?!./node_modules/sass-loader/lib/loader.js?!./src/styles/main.scss");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ 0:
+/*!**********************************************************************************!*\
+  !*** multi ./node_modules/react-dev-utils/webpackHotDevClient.js ./src/index.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\Users\skyle\Documents\Code\Projects\Hoodlm\hoodlmclothing\node_modules\react-dev-utils\webpackHotDevClient.js */"./node_modules/react-dev-utils/webpackHotDevClient.js");
+module.exports = __webpack_require__(/*! C:\Users\skyle\Documents\Code\Projects\Hoodlm\hoodlmclothing\src\index.js */"./src/index.js");
+
+
+/***/ })
+
+},[[0,"runtime~main",1]]]);
+//# sourceMappingURL=main.chunk.js.map

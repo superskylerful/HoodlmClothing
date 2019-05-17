@@ -1,0 +1,74 @@
+.NavBar {
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    border-bottom: 1px solid black;
+    font-family: 'Oswald', sans-serif;
+    .NavBarLeftColumn img {
+        width: 133px;
+        -webkit-filter: grayscale(0);
+        filter: grayscale(0);
+        -webkit-transition: .03s ease-in-out;
+        transition: .03s ease-in-out;
+        &:hover {
+            -webkit-filter: grayscale(100%);
+	        filter: grayscale(100%);
+        }
+    }
+    .NavBarCenterColumn {
+        display: flex;
+        width: 90%;
+        align-items: center;
+    }
+    .NavBarLinkWrapper {
+        display: flex;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: bold;
+        margin: 0px !important;
+        padding: 0px !important;
+        .NavBarLinkListItems {
+            display: flex;
+            flex-direction: row;
+        }
+        li {
+            padding-right: 20px;
+            :hover {
+                color: #64bde8;
+            }
+        }
+    }
+    ul {
+        list-style: none;
+    }
+    .NavBarRightColumn {
+        display: flex;
+        justify-content: center;
+        font-size: 2rem;
+        padding: 20px;
+        :hover {
+            color: #64bde8;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .NavBar {
+        .NavBarCenterColumn {
+            display: flex;
+            justify-content: center;
+            .HamburgerCloseButton {
+                font-size: 2rem;
+            }
+            .HamburgerOpenButton {
+                font-size: 2rem;
+                margin-top: 26px;
+            }
+            .NavBarLinkListItems {
+                flex-direction: column;
+                font-size: 3rem;
+            }
+        }
+    }
+}
