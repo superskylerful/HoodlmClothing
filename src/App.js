@@ -5,6 +5,7 @@ import Shop from './pages/shop';
 import Media from './pages/media';
 import Blog from './pages/blog';
 import Cart from './pages/cart';
+import Product from './pages/product';
 
 // import { library } from '@fortawesome/fontawesome-svg-core';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,7 +25,7 @@ class App extends Component {
           <Route path="/Media" component={Media} />
           <Route path="/Blog" component={Blog} />
           <Route path="/Cart" component={Cart} />
-          <Route component={Error} />
+          <Route path="/product/:id" component={Product} />
         </Switch>
         </div>
       </BrowserRouter>

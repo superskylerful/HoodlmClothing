@@ -12,8 +12,8 @@ export default class Navbar extends Component {
         </div>
         <div className="NavBarCenterColumn">
           <ResponsiveMenu
-          menuOpenButton={<div className="HamburgerCloseButton"> <i class="fas fa-bars" /> </div>}
-          menuCloseButton={<div className="HamburgerOpenButton"><i class="fas fa-times" /></div>}
+          menuOpenButton={<div className="HamburgerCloseButton"> <i className="fas fa-bars" /> </div>}
+          menuCloseButton={<div className="HamburgerOpenButton"><i className="fas fa-times" /></div>}
           changeMenuOn="500px"
           largeMenuClassName="large-menu-classname"
           smallMenuClassName="small-menu-classname"
@@ -29,7 +29,7 @@ export default class Navbar extends Component {
           />
           </div>
           <div className="NavBarRightColumn">
-            <Link to="/cart"><i class="fas fa-shopping-bag"></i></Link>
+            <Link to="/cart"><i className="fas fa-shopping-bag"></i></Link>
           </div>
       </div>
     )
