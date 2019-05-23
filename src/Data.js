@@ -1,4 +1,4 @@
-export const mockData = [
+export const storeProducts = [
     {
         id: "1",
         name: `"Hoodlm" Side Logo 3M Camp Cap`,
@@ -11,7 +11,7 @@ export const mockData = [
             "3M Reflective Logo Printed On Right Side.",
             "Imported."
         ],
-        price: 10,
+        price: 1,
         qty: 2,
         variants: [{
         sizes: ["S", "M", "L"],
@@ -29,7 +29,7 @@ export const mockData = [
             "3M Reflective Logo Printed On Right Side.",
             "Imported."
         ],
-        price: 10,
+        price: 2,
         qty: 3,
         variants: [{
         sizes: ["S", "M", "L"],
@@ -47,7 +47,7 @@ export const mockData = [
             ["3M Reflective Logo Printed On Right Side."],
             ["Imported."]
         ],
-        price: 10,
+        price: 3,
         qty: 0,
         variants: [{
         sizes: ["S", "M", "L"],
@@ -65,7 +65,7 @@ export const mockData = [
             "3M Reflective Logo Printed On Right Side.",
             "Imported."
         ],
-        price: 10,
+        price: 4,
         qty: 0,
         variants: [{
         sizes: ["S", "M", "L"],
@@ -83,7 +83,7 @@ export const mockData = [
             "3M Reflective Logo Printed On Right Side.",
             "Imported."
         ],
-        price: 10,
+        price: 5,
         qty: 0,
         variants: [{
         sizes: ["S", "M", "L"],
@@ -101,7 +101,7 @@ export const mockData = [
             "3M Reflective Logo Printed On Right Side.",
             "Imported."
         ],
-        price: 10,
+        price: 6,
         qty: 0,
         variants: [{
         sizes: ["S", "M", "L"],

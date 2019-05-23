@@ -14,7 +14,7 @@ export default class Navbar extends Component {
           <ResponsiveMenu
           menuOpenButton={<div className="HamburgerCloseButton"> <i className="fas fa-bars" /> </div>}
           menuCloseButton={<div className="HamburgerOpenButton"><i className="fas fa-times" /></div>}
-          changeMenuOn="500px"
+          changeMenuOn="850px"
           largeMenuClassName="large-menu-classname"
           smallMenuClassName="small-menu-classname"
           menu={

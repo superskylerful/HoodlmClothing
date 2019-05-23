@@ -4,7 +4,7 @@ import Home from './pages/home';
 import Shop from './pages/shop';
 import Media from './pages/media';
 import Blog from './pages/blog';
-import Cart from './pages/cart';
+import hoodlmCart from './pages/hoodlmCart';
 import Product from './pages/product';
 
 // import { library } from '@fortawesome/fontawesome-svg-core';
@@ -24,7 +24,7 @@ class App extends Component {
           <Route path="/Shop" component={Shop} />
           <Route path="/Media" component={Media} />
           <Route path="/Blog" component={Blog} />
-          <Route path="/Cart" component={Cart} />
+          <Route path="/Cart" component={hoodlmCart} />
           <Route path="/product/:id" component={Product} />
         </Switch>
         </div>

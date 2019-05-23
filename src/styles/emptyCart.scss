@@ -1,0 +1,30 @@
+.EmptyCartContainer {
+    display: flex;
+    flex-direction: column;
+    .EmptyCartTitleContainer {
+        display: flex;
+        justify-content: center;
+        .EmptyCartTitle {
+            justify-content: center;
+        }
+    }
+    .GoToShopContainer {
+        display: flex;
+        justify-content: center;
+        .GoToShopButton {
+            background-color: #EECEC7;
+            border: 1px solid black;
+            color: white !important;
+            width: 170px;
+            padding: 5px 30px;
+            text-align: center;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 1.4rem;
+            &:hover {
+                background-color: #CF9082;
+            }
+        }
+    }
+
+}

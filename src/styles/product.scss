@@ -1,4 +1,75 @@
 .ProductWrapper {
     display: flex;
     flex-direction: row;
+    margin-top: 100px;
+    .ProductImage {
+        img {
+            border: 1px solid black;
+            border-radius: 15px;
+            width: 30vw;
+            height: 30vw;
+        }
+    }
+    .ProductContent {
+        margin: 30px;
+        .ProductTitle {
+            font-weight: bold;
+            font-size: 3rem;
+        }
+        .ProductDescription {
+            margin: 30px;
+            font-size: 1.5rem;
+        }
+        .ProductPrice {
+            font-size: 1.5rem;
+            margin-left: 30px;
+        }
+        .ProductFooterWrapper {
+            display: flex;
+            .AddToCart {
+                background-color: #EECEC7;
+                border: 1px solid black;
+                color: white !important;
+                padding: 5px 30px;
+                text-align: center;
+                font-weight: bold;
+                display: inline-block;
+                font-size: 1.4rem;
+                cursor: pointer;
+                &:hover {
+                    background-color: #CF9082;
+                }
+            }
+            .SecondaryButtons {
+                display: flex;
+                flex-direction: column;
+            }
+                .GoToCart a{
+                    background-color: #EECEC7;
+                    border: 1px solid black;
+                    color: white !important;
+                    padding: 8px 45px;
+                    text-align: center;
+                    font-weight: bold;
+                    display: inline-block;
+                    font-size: 1.4rem;
+                    &:hover {
+                        background-color: #CF9082;
+                    }
+                }
+                .BackButton a{
+                    background-color: #EECEC7;
+                    border: 1px solid black;
+                    color: white !important;
+                    padding: 8px 30px;
+                    text-align: center;
+                    font-weight: bold;
+                    display: inline-block;
+                    font-size: 1.4rem;
+                    &:hover {
+                        background-color: #CF9082;
+                    }
+                }
+        }
+    }
 }
