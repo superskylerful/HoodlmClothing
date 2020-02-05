@@ -73,3 +73,37 @@
         }
     }
 }
+
+@media (max-width: 700px) {
+    .ProductWrapper {
+        display: flex;
+        flex-direction: column;
+        .ProductImage {
+            margin-top: -80px;
+            display: flex;
+            justify-content: center;
+            img {
+                width: 65vw;
+                height: 65vw;
+            }
+        }
+        .ProductContent {
+            margin: 0px;
+            .ProductTitle {
+                margin-top: 10px;
+                font-size: 1.8rem;
+                justify-content: center;
+            }
+            .ProductDescription {
+                margin-top: -5px;
+                font-size: 1.1rem;
+            }
+            .ProductPrice {
+                margin-top: -20px;
+            }
+            .ProductFooterWrapper {
+                margin-left: 20px;
+            }
+        }
+    }
+}

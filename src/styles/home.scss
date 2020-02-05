@@ -1,38 +1,40 @@
-.slick-list {
-    .slick-track {
-        .slick-slide {
-            height: 340px;
-
-            .SlickImg {
-                display: flex;
-                .SlickHeader {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    .TopHeader {
-                        height: 500px;
-                        h2 {
-                            font-size: 3rem;
-                            color: white;
-                            display: flex;
-                            justify-content: center;
-                        }
-                        h3 {
-                            font-size: 2rem;
-                            color: white;
-                        }
-                }
-            }
-            
-            
+.HomePage {
+    .Image {
+        margin-left: 20vw;
+        margin-right: 20vw;
+        width: 60vw;;
+        height: 100%;
+        position: relative;
+        text-align: center;
+        color: white;
+        img {
+            height: 100%;
+            width: 100%;
         }
-                .one {
-                    background-image: url("https://source.unsplash.com/random");
-                    background-position: center center;
-                    background-size: auto;
-                    background-repeat: no-repeat;
-                }
+        .Title {
+            position: absolute;
+            top: 40%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            .h1 {
+                font: bold;
+            }
+        }
     }
 }
+
+@media (max-width: 700px) {
+    .HomePage {
+        display: flex;
+        .Image {
+            margin-left: 0px;
+            margin-right: 0px;
+            img {
+                width: 96vw;
+                height: 100%;
+                
+            }
+        }
+    }
 }

@@ -1,37 +1,29 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../components/navigation/navbar";
 import Footer from "../components/navigation/footer";
 import EmptyCart from "../components/cart/emptyCart";
+import { Link } from "react-router-dom";
 import { isUndefined } from "util";
 
-export default class hoodlmCart extends Component {
-  constructor(props) {
-    super(props);
+const HoodlmCart = props => {
+  const [cart_items, setCartItems] = useState([]);
+  const [cart_total, setCartTotal] = useState(0);
 
-    this.state = {
-      cart_items: [],
-      cart_total: 0
-    };
-  }
+  useEffect(() => {
+    renderCartTotal();
 
-  componentDidMount() {
-    this.renderCartTotal()
-  }
-
-  componentWillMount() {
-    if (isUndefined(this.props.location.state)) {
-      this.setState({
-        cart_items: ""
-      });
+    if (isUndefined(props.location.state)) {
+      setCartItems([]);
     } else {
-      this.setState({
-        cart_items: this.props.location.state.cart_items
-      });
+      setCartItems(
+        props.location.state.cart_items
+      );
     }
-  }
 
-  renderCartItems = () => {
-    return this.state.cart_items.map(cart_item => {
+  });
+
+  const renderCartItems = () => {
+    return cart_items.map(cart_item => {
       return (
         <div className="CartItemContainer" key={cart_item.id}>
           <div className="CartImage">
@@ -39,47 +31,43 @@ export default class hoodlmCart extends Component {
           </div>
           <div className="CartContent">
             <div className="CartTitle">{cart_item.name}</div>
-            <div className="CartPrice">${Number(cart_item.price).toFixed(2)}</div>
+            <div className="CartPrice">
+              ${Number(cart_item.price).toFixed(2)}
+            </div>
           </div>
         </div>
       );
     });
   };
 
-  renderCartTotal = () => {
-    let rollingTotal = 0
-    if(this.state.cart_items) {
-    this.state.cart_items.map(item => {
-      rollingTotal += item.price
-    })
-    this.setState({
-      cart_total: rollingTotal
-    })} else {
-      this.setState({
-        cart_total: 0
-      })
+  const renderCartTotal = () => {
+    let rollingTotal = 0;
+    if (cart_items) {
+      cart_items.map(item => {
+        rollingTotal += item.price;
+      });
+      setCartTotal(rollingTotal);
+    } else {
+      setCartTotal(0);
     }
-  }
+  };
 
-  render() {
-    console.log("cart Items: ", this.state.cart_items);
-    console.log("toal: ", this.state.cart_total);
-    return (
-      <div>
-        <NavBar />
-
-        {this.state.cart_items !== "" ? (
-            this.renderCartItems()
-            
-        ) : (
-          <EmptyCart />
-        )}
-        {this.state.cart_items == "" ? null : 
-            <div className="CartTotal">
-              Total: ${Number(this.state.cart_total).toFixed(2)}
-            </div>}
-        <Footer />
+  return (
+    <div>
+      <NavBar />
+      {cart_items.length > 0 ? renderCartItems() : <EmptyCart />}
+      {cart_items.length > 0 ?  (
+        <div className="CartTotal">Total: ${Number(cart_total).toFixed(2)}</div>
+      ) : null}
+      <div className="ReturnShopping">
+        <Link to="/shop">Continue Shopping</Link>
       </div>
-    );
-  }
-}
+      {/* <div className="CheckoutButton">
+        <button type="button">Checkout</button>
+      </div> */}
+      <Footer />
+    </div>
+  );
+};
+
+export default HoodlmCart;

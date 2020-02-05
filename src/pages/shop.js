@@ -1,39 +1,34 @@
-import React, { Component } from 'react'
+import React, { useState, useEffect } from 'react'
 import NavLinks from '../components/navigation/navbar';
 import Footer from '../components/navigation/footer';
 import { storeProducts } from "../Data";
 import {Link} from 'react-router-dom';
 import { isUndefined } from "util";
 
-export default class Shop extends Component {
-  constructor(props){
-    super(props);
+const Shop = props => {
+  const [cart_items, setCartItems] = useState([]);
 
-    this.state = {
-      cart_items: []
-    }
-  }
-
-  componentWillMount() {
-    if (isUndefined(this.props.location.state)) {
-      this.setState({
+  useEffect(() => {
+    if (isUndefined(props.location.state)) {
+      setCartItems({
         cart_items: ""
       });
     } else {
-      this.setState({
-        cart_items: this.props.location.state.cart_items
+      setCartItems({
+        cart_items: props.location.cart_items
       });
     }
-  }
+  })
 
-  renderProducts = () => {
+
+  const renderProducts = () => {
     return storeProducts.map(product => {
       return (
         <div className="ItemWrapper" key={product.id}>
           <Link to={{
             pathname: `/product/${product.id}`,
             state: {
-              cart_items: this.state.cart_items
+              cart_items: cart_items
             }
             }}>
           <div className="Item">
@@ -54,8 +49,7 @@ export default class Shop extends Component {
     })
   }
   
-  render() {
-    console.log("props recieved by Shop page: ", this.state.cart_items)
+    console.log("props recieved by Shop page: ", cart_items)
     return (
       <div>
         <NavLinks />
@@ -64,10 +58,12 @@ export default class Shop extends Component {
         <h1>Products</h1>
         </div>
         <div className="ItemContent">
-        {this.renderProducts()}
+        {renderProducts()}
         </div>
         <Footer />
       </div>
     )
-  }
 }
+
+
+export default Shop

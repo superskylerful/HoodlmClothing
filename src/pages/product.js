@@ -1,35 +1,27 @@
-import React, { Component } from "react";
+import React, { useState, useEffect } from "react";
 import NavBar from "../components/navigation/navbar";
 import Footer from "../components/navigation/footer";
 import { storeProducts } from "../Data";
 import { Link } from "react-router-dom";
 import { isUndefined } from "util";
 
-export default class Product extends Component {
-  constructor(props) {
-    super(props);
+const Product = props => {
+  const [product, setProduct] = useState([])
+  const [cart_items, setCartItems] = useState([])
 
-    this.state = {
-      product: [],
-      cart_items: []
-    };
-  }
-
-  handleAddItem = () => {
-    if (!isUndefined(this.props.location.state)) {
-      this.setState({ cart_items: this.props.location.state.cart_items });
+  const handleAddItem = () => {
+    if (!isUndefined(props.location.state)) {
+      setCartItems(props.location.cart_items);
     }
-    const item = this.state.product[0];
+    const item = product[0];
     const addMe = [
       { id: item.id, image: item.image, name: item.name, price: item.price }
     ];
-    this.setState({
-      cart_items: [...this.state.cart_items, ...addMe]
-    });
+    setCartItems([...cart_items, ...addMe]);
   };
 
-  renderProduct = () => {
-    return this.state.product.map(product => {
+  const renderProduct = () => {
+    return product.map(product => {
       return (
         <div key={product.id} className="show-page-content">
           <div className="ProductWrapper">
@@ -60,7 +52,9 @@ export default class Product extends Component {
                   </div> */}
                 </div>
                 <div className="AddToCart">
-                  <h3 onClick={this.handleAddItem}> Add To Cart</h3>
+                  {product.qty === 0 ? <h3>Sold Out</h3> :
+                  <h3 onClick={handleAddItem}> Add To Cart</h3>
+                  }
                   </div>
                   <div className="SecondaryButtons">
                       <div className="GoToCart">
@@ -68,7 +62,7 @@ export default class Product extends Component {
                         to={{
                           pathname: `/Cart/${product.id}`,
                           state: {
-                            cart_items: this.state.cart_items
+                            cart_items: cart_items
                           }
                         }}
                       >
@@ -81,7 +75,7 @@ export default class Product extends Component {
                         to={{
                           pathname: "/shop",
                           state: {
-                            cart_items: this.state.cart_items
+                            cart_items: cart_items
                           }
                         }}
                       >
@@ -97,32 +91,31 @@ export default class Product extends Component {
     });
   };
 
-  componentWillMount() {
-    if (!isUndefined(this.props.location.state)) {
-      this.setState({
-        cart_items: this.props.location.state.cart_items,
-        product: storeProducts.filter(item => {
-          return item.id === this.props.match.params.id;
-        })
-      });
-    } else {
-      this.setState({
-        cart_items: [],
-        product: storeProducts.filter(item => {
-          return item.id === this.props.match.params.id;
-        })
-      });
-    }
-  }
+  useEffect(() =>{
+    // if (props.location.state.cart_items) {
+    //   setCartItems(props.location.cart_items.filter(item => {
+    //       return item.id === props.match.params.id;
+    //     })
+    //   );
+    // } else {
+    //   setCartItems([]
+    //   );
+    // }
 
-  render() {
-    console.log("props recieved by Product page: ", this.state.cart_items);
+    setProduct(storeProducts.filter(item => {
+      return item.id === props.match.params.id
+    }))
+  },[])
+
+
+    console.log("props recieved by Product page: ", cart_items);
     return (
       <div>
         <NavBar />
-        <div className="ItemContent">{this.renderProduct()}</div>
+        <div className="ItemContent">{renderProduct()}</div>
         <Footer />
       </div>
     );
-  }
 }
+
+export default Product

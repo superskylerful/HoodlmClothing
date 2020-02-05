@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import ResponsiveMenu from 'react-responsive-navbar';
 import { Link } from 'react-router-dom';
 import LogoImage from "../../assets/hoolmimg.jpg";
 
-export default class Navbar extends Component {
-  render() {
+const Navbar = () => {
     return (
       <div className="NavBar">
         <div className="NavBarLeftColumn">
@@ -33,5 +32,6 @@ export default class Navbar extends Component {
           </div>
       </div>
     )
-  }
 }
+
+export default Navbar;

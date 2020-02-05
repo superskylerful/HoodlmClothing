@@ -1,0 +1,68 @@
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-title {
+    display: flex;
+    justify-content: center;
+}
+
+.form-group {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.form input {
+    font-size: 1.5rem;
+    padding: 1.5rem 2rem;
+    border-radius: 8px;
+    border: none;
+    border: 1px solid black;
+    width: 50vw;
+    display: block;
+    transition: all 0.1s;
+}
+
+.btn {
+    background-color: white;
+    color: black;
+    font-size: 1.25em;
+    padding: 10px 25px;
+    border: 1px solid black;
+    border-radius: 4px;
+    outline: none;
+    &:hover {
+        background-color: grey;
+    }
+}
+
+.AccessDeniedPage {
+    display: flex;
+    justify-content: center;
+}
+
+.BackButton a{
+    background-color: #EECEC7;
+    border: 1px solid black;
+    color: white !important;
+    padding: 8px 30px;
+    text-align: center;
+    font-weight: bold;
+    display: inline-block;
+    font-size: 1.4rem;
+    &:hover {
+        background-color: #CF9082;
+    }
+}
+
+@media (max-width: 700px) {
+    .form input {
+        width: 70vw;
+    }
+
+    .form-group {
+        margin-top: 19px;
+        margin-bottom: 19px;
+    }
+}
