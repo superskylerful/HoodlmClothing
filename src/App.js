@@ -11,7 +11,7 @@ import Media from './pages/media';
 import Blog from './pages/blog';
 import hoodlmCart from './pages/hoodlmCart';
 import Product from './pages/product';
-import loginPage from './pages/loginPage';
+import Auth from './pages/auth';
 import Admin from './pages/admin';
 import { Link } from "react-router-dom";
 
@@ -26,9 +26,22 @@ class App extends Component {
     super()
     
     this.state = {
-      loggedIn: "LOGGED_IN"
+      loggedInStatus: "NOT_LOGGED_IN"
     }
   }
+
+  handleSuccessfulLogin() {
+    this.setState({
+      loggedInStatus: "LOGGED_IN"
+    })
+  }
+
+  handleUnsuccessfulLogin() {
+    this.setState({
+      loggedInStatus: "NOT_LOGGED_IN"
+    })
+  }
+
   render() {
     return (
       <div className="app">
@@ -36,13 +49,25 @@ class App extends Component {
         <div className="container">
         <Switch>
           <Route exact path="/" component={Home} />
+
+          <Route
+            path="/admin"
+            render={props => (
+              <Admin
+                {...props}
+                handleSuccessfulLogin={this.handleSuccessfulLogin}
+                handleUnsuccessfulLogin={this.handleUnsuccessfulLogin}
+              />
+            )}
+          />
+
           <Route path="/Shop" component={Shop} />
           <Route path="/Media" component={Media} />
           <Route path="/Blog" component={Blog} />
           <Route path="/Cart" component={hoodlmCart} />
           <Route path="/product/:id" component={Product} />
-          <Route path="/LoginPage" component={loginPage} />
-          {this.state.loggedIn === "LOGGED_IN" ? <Route path="/Admin" component={Admin} /> : 
+          <Route path="/Auth" component={Auth} />
+          {/* {this.state.loggedIn === "LOGGED_IN" ? <Route path="/Admin" component={Admin} /> : 
           <div className="AccessDeniedPage">
             <div className="AccessDenied">
               <h1>403 Access Denied</h1>
@@ -50,7 +75,7 @@ class App extends Component {
                 <Link to="/">Back</Link>
                 </div>
               </div>
-            </div>}
+            </div>} */}
         </Switch>
         </div>
       </BrowserRouter>
