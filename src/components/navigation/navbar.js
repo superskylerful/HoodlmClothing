@@ -2,8 +2,25 @@ import React, { useState } from 'react';
 import ResponsiveMenu from 'react-responsive-navbar';
 import { Link } from 'react-router-dom';
 import LogoImage from "../../assets/hoolmimg.jpg";
+import axios from 'axios';
+import { withRouter } from "react-router";
 
-const Navbar = () => {
+const Navbar = (props) => {
+
+  const handleSignOut = () => {
+    axios.delete("https://api.devcamp.space/logout", {
+      withCredentials: true
+    }).then(response => {
+      if (response.status === 200) {
+        props.history.push("/");
+        props.handleSuccessfulLogout();
+      }
+      return response.data;
+    }).catch(error => {
+      console.log("Error signing out", error)
+    })
+  }
+
     return (
       <div className="NavBar">
         <div className="NavBarLeftColumn">
@@ -27,6 +44,9 @@ const Navbar = () => {
             }
           />
           </div>
+          <div>
+            {props.loggedInStatus === 'LOGGED_IN' ? <div className="LogoutButton"><a onClick={handleSignOut}>Sign Out</a></div> : null }
+          </div>
           <div className="NavBarRightColumn">
             <Link to="/cart"><i className="fas fa-shopping-bag"></i></Link>
           </div>
@@ -34,4 +54,4 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+export default withRouter(Navbar);

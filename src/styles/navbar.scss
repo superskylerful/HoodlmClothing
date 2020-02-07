@@ -53,6 +53,14 @@
     }
 }
 
+.LogoutButton {
+    margin-top: 22px;
+    :hover {
+        border-bottom: 1px solid black;
+        cursor: pointer;
+    }
+}
+
 @media (max-width: 700px) {
     .NavBar {
         .NavBarCenterColumn {
