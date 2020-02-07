@@ -52,7 +52,7 @@ const Shop = props => {
     console.log("props recieved by Shop page: ", cart_items)
     return (
       <div>
-        <NavLinks />
+        {/* <NavLinks /> */}
   
         <div className="ProductsTitle">
         <h1>Products</h1>

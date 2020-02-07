@@ -111,7 +111,7 @@ const Product = props => {
     console.log("props recieved by Product page: ", cart_items);
     return (
       <div>
-        <NavBar />
+        {/* <NavBar /> */}
         <div className="ItemContent">{renderProduct()}</div>
         <Footer />
       </div>

@@ -14,6 +14,8 @@ import Product from './pages/product';
 import Auth from './pages/auth';
 import Admin from './pages/admin';
 import { Link } from "react-router-dom";
+import axios from 'axios';
+import Navbar from './components/navigation/navbar'
 
 // import { library } from '@fortawesome/fontawesome-svg-core';
 // import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -31,6 +33,7 @@ class App extends Component {
 
     this.handleSuccessfulLogin = this.handleSuccessfulLogin.bind(this);
     this.handleUnsuccessfulLogin = this.handleUnsuccessfulLogin.bind(this);
+    this.handleSuccessfulLogout = this.handleSuccessfulLogout.bind(this);
   }
 
   handleSuccessfulLogin() {
@@ -45,11 +48,55 @@ class App extends Component {
     })
   }
 
+  handleSuccessfulLogout() {
+    this.setState({
+      loggedInStatus: "NOT_LOGGED_IN"
+    })
+  }
+
+  checkLoginStatus() {
+    return axios
+    .get("https://api.devcamp.space/logged_in", {
+      withCredentials: true
+    }).then(response => {
+      const loggedIn = response.data.logged_in;
+      const loggedInStatus = this.state.loggedInStatus;
+
+      // If loggedIn and status LOGGED_IN => return data
+      // If loggedIn status NOT_LOGGED_IN => update state
+      // If not loggedIn and status LOGGED_IN => update state
+
+
+      if (loggedIn && loggedInStatus === "LOGGED_IN") {
+        return loggedIn;
+      } else if (loggedIn && loggedInStatus === "NOT_LOGGED_IN") {
+        this.setState({
+          loggedInStatus: "LOGGED_IN"
+        });
+      } else if (!loggedIn && loggedInStatus === "LOGGED_IN") {
+        this.setState({
+          loggedInStatus: "NOT_LOGGED_IN"
+        });
+      } 
+    })
+    .catch(error => {
+      console.log("Error", error)
+    })
+  }
+
+  componentDidMount() {
+    this.checkLoginStatus();
+  }
+
   render() {
     return (
       <div className="app">
       <BrowserRouter>
         <div className="container">
+          <Navbar
+            loggedInStatus={this.state.loggedInStatus}
+            handleSuccessfulLogout={this.handleSuccessfulLogout}
+          />
         <Switch>
           <Route exact path="/" component={Home} />
 

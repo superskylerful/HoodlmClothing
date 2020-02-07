@@ -54,7 +54,7 @@ const HoodlmCart = props => {
 
   return (
     <div>
-      <NavBar />
+      {/* <NavBar /> */}
       {cart_items.length > 0 ? renderCartItems() : <EmptyCart />}
       {cart_items.length > 0 ?  (
         <div className="CartTotal">Total: ${Number(cart_total).toFixed(2)}</div>

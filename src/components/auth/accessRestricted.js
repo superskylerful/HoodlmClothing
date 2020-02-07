@@ -6,7 +6,7 @@ export default class AccessRestricted extends Component {
     render() {
         return (
             <div>
-                <Navbar />
+                {/* <Navbar /> */}
                     <div className="AccessRestricted">
                         <h1>Access Restricted</h1>
                     </div>

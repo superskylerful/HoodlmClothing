@@ -8,7 +8,7 @@ export default class Admin extends Component {
     render() {
         return (
             <div className="AdminPageContainer">
-                <NavLinks />
+                {/* <NavLinks /> */}
                     <AdminForm  />
                 <Footer />
             </div>

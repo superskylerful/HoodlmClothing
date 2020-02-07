@@ -5,7 +5,7 @@ import Footer from '../components/navigation/footer';
 const Media = () => {
     return (
       <div className="media-page-wrapper">
-        <Navbar />
+        {/* <Navbar /> */}
         <div className="MediaTitle">
           <h1>Media</h1>
         </div>

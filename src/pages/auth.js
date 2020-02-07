@@ -23,7 +23,7 @@ export default class Auth extends Component {
     render() {
         return (
             <div className="LoginPageWrapper">
-                <NavLinks />
+                {/* <NavLinks /> */}
                 <div className="LoginButtons">
                     <Login
                         handleSuccessfulAuth={this.handleSuccessfulAuth}

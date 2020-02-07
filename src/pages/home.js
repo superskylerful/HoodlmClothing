@@ -6,7 +6,7 @@ const Home = () => {
   
     return (
       <div>
-        <Navbar />
+        {/* <Navbar /> */}
           <div className="HomePage">
             <div className="Image">
               <img src ="https://res.cloudinary.com/hoodlm/image/upload/v1579106153/hoodlm/hoodlm14_gtivrz.jpg" />

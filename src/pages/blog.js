@@ -5,7 +5,7 @@ import Footer from '../components/navigation/footer';
 const Blog = () => {
     return (
       <div>
-        <NavLinks />
+        {/* <NavLinks /> */}
         <div className="BlogWrapper">
           <div className="BlogTitle">
             <h1>Spring Collection Release</h1>
