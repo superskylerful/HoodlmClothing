@@ -22,12 +22,15 @@ import { Link } from "react-router-dom";
 // library.add(fafacebooksquare)
 
 class App extends Component {
-  constructor(){
-    super()
+  constructor(props){
+    super(props)
     
     this.state = {
       loggedInStatus: "NOT_LOGGED_IN"
     }
+
+    this.handleSuccessfulLogin = this.handleSuccessfulLogin.bind(this);
+    this.handleUnsuccessfulLogin = this.handleUnsuccessfulLogin.bind(this);
   }
 
   handleSuccessfulLogin() {
@@ -51,9 +54,9 @@ class App extends Component {
           <Route exact path="/" component={Home} />
 
           <Route
-            path="/admin"
+            path="/auth"
             render={props => (
-              <Admin
+              <Auth
                 {...props}
                 handleSuccessfulLogin={this.handleSuccessfulLogin}
                 handleUnsuccessfulLogin={this.handleUnsuccessfulLogin}
@@ -66,8 +69,7 @@ class App extends Component {
           <Route path="/Blog" component={Blog} />
           <Route path="/Cart" component={hoodlmCart} />
           <Route path="/product/:id" component={Product} />
-          <Route path="/Auth" component={Auth} />
-          {/* {this.state.loggedIn === "LOGGED_IN" ? <Route path="/Admin" component={Admin} /> : 
+          {this.state.loggedInStatus === "LOGGED_IN" ? <Route path="/Admin" component={Admin} /> : 
           <div className="AccessDeniedPage">
             <div className="AccessDenied">
               <h1>403 Access Denied</h1>
@@ -75,7 +77,7 @@ class App extends Component {
                 <Link to="/">Back</Link>
                 </div>
               </div>
-            </div>} */}
+            </div>}
         </Switch>
         </div>
       </BrowserRouter>

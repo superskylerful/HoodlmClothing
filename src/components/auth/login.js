@@ -32,7 +32,7 @@ export default class Login extends Component {
         },
         { withCredentials: true }
         ).then(response => {
-            if (response.data.status === 'created') {
+            if (response.data.status == "created") {
                 this.props.handleSuccessfulAuth();
             } else {
                 this.setState({
